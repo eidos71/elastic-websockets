@@ -1,0 +1,23 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+/.classpath
+/.external
+/src/main/generated
+/src/main/webapp/META-INF
+/src/main/resources/rebel.xml
+/src/generated
+/target/
+/.apt_generated/
+/.settings/
+/.checkstyle
+/.classpath
+/.factorypath
+/.project
+/.directory
+/.externalToolBuilders
+/bin/
