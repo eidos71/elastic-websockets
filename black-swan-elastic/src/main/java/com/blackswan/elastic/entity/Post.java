@@ -12,7 +12,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
  * @author blackswam
  *
  */
-@Document(indexName = "post", type = "post", shards = 1, replicas = 0)
+@Document(indexName = "post", type = "post")
 public class Post {
 	@Id
 	private String id;
