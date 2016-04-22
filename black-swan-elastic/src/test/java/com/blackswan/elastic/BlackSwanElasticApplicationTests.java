@@ -52,14 +52,16 @@ public class BlackSwanElasticApplicationTests {
 	        post.setTags(Arrays.asList(tag, tag2));
 	        dftPostService.save(post);
 
-	        assertThat(post.getId(), notNullValue());
-
+	       // assertThat(post.getId(), notNullValue());
+	        assertThat( dftPostService.findOne(post.getId()) , notNullValue());
+	        
 	        Post post2 = new Post();
-	        post2.setId("1");
+	        post2.setId("2");
 	        post2.setTitle("Bigining with spring boot application");
 	        post2.setTags(Arrays.asList(tag));
-	        dftPostService.save(post);
-	        assertThat(post2.getId(), notNullValue());
+	        dftPostService.save(post2);
+	     
+	        assertThat( dftPostService.findOne(post2.getId()) , notNullValue());
 
 
 
