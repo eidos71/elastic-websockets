@@ -8,11 +8,12 @@
     </appender>
 
     <logger name="org.springframework" level="WARN" />
-    <logger name="org.elasticsearch.cluster" level ="TRACE" />
+    <logger name="org.elasticsearch.cluster" level ="DEBUG" />
 
-    <!-- in order to debug some marshalling issues, this needs to be TRACE -->
-    <logger name="org.springframework.web.servlet.mvc" level="WARN" />
-
+    <!-- in order to debug some marshalling issues, this needs to be TRACE
+    <logger name="org.springframework.web.servlet.mvc" level="TRACE" />
+ -->
+ <logger name="org.springframework.web" level="TRACE" />
     <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
