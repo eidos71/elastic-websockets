@@ -6,6 +6,8 @@ import org.springframework.web.socket.config.annotation.AbstractWebSocketMessage
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
+import com.blackswan.elastic.mapping.routing.MappingRoutes;
+
 @Configuration
 @EnableWebSocketMessageBroker 
 public class WebSocketConfig   extends AbstractWebSocketMessageBrokerConfigurer {
@@ -18,7 +20,8 @@ public class WebSocketConfig   extends AbstractWebSocketMessageBrokerConfigurer 
 
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		registry.addEndpoint("/hello").withSockJS();
+		//registry.addEndpoint("/hello").withSockJS();
+		registry.addEndpoint(MappingRoutes.GREETING_ROUTE).withSockJS();
 	}
 
 }
